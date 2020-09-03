@@ -43,8 +43,4 @@
     </div>
 </div>
 
-<div class="wrapper create-pizza">
-    
-</div>
-
 @endsection
