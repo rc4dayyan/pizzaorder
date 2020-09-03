@@ -31,23 +31,16 @@ class PizzaController extends Controller
         return view('pizzas.create');
     }
 
-    public function store(Request $request) {
+    public function store() {
 
-        // $pizza = new Pizza();
+        $pizza = new Pizza();
 
-        // $pizza->name = request('name');
-        // $pizza->type = request('type');
-        // $pizza->base = request('base');
-        // $pizza->toppings = request('toppings');
+        $pizza->name = request('name');
+        $pizza->type = request('type');
+        $pizza->base = request('base');
+        $pizza->toppings = request('toppings');
 
-        // $pizza->save();
-
-        $validatedData = $request->validate([
-            'name' => 'required|max:255',
-            'type' => 'required',
-            'base' => 'required'
-        ]);
-        Pizza::create($validatedData);
+        $pizza->save();
 
         return redirect('/')->with('mssg', 'Thanks for your order');
     }
