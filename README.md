@@ -14,5 +14,18 @@ Simple application for order pizza
 10. Open browser `http://localhost:8000`<br/>
 
 ### Usage
-1. Order pizza by clicking 'Order Pizza'
-2. 
+1. Register for admin to see ordered pizza list <br/>
+2. User can Order pizza without registration, by clicking 'Order Pizza' <br/>
+3. To test api with oauth: <br/>
+    - Login process, <br/>
+        1. Request URL = http://localhost:8000/api/user/login<br/>
+        2. Method = POST<br/>
+        3. body params = email and password (registered user)<br/>
+        4. Get "access_token" response<br/>
+    <br/>
+    - Get ordered pizza list,<br/>
+        1. Request URL = http://localhost:8000/api/pizzas/orders<br/>
+        2. Method = GET<br/>
+        3. Header params: <br/>
+            - name = authorization<br/>
+            - value = Bearer $access_token<br/>
