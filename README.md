@@ -10,7 +10,7 @@ Simple application for order pizza
 6. Install Depedency, Run `composer install`<br/>
 7. Migrate and Seed, Run `php artisan migrate --seed`<br/>
 8. Passport install, Run `php artisan passport:install`<br/>
-9. Set APY_KEY, Run `php artisan key:generate`<br/>
+9. Set APP_KEY, Run `php artisan key:generate`<br/>
 9. Run on local dev server, Run `php artisan serve`<br/>
 10. Open browser `http://localhost:8000`<br/>
 
